@@ -1,8 +1,8 @@
 DOCKER_REGISTRY=nicholasjackson/waypoint-custom-odr
-DOCKER_TAG=0.1.0
+DOCKER_TAG=0.2.0
 
 build-odr-dev:
-	DOCKER_BUILDKIT=1 docker build --progress=plain -f Dockerfile -t ${DOCKER_REGISTRY}:0.1.0 .
+	DOCKER_BUILDKIT=1 docker build --progress=plain -f Dockerfile -t ${DOCKER_REGISTRY}:${DOCKER_TAG} .
 
 build-odr-multi-arch:
 	docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
